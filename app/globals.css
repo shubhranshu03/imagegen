@@ -8,7 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-space-grotesk);
+  /* Map other font variables to Space Grotesk so all components use it */
+  --font-geist-sans: var(--font-space-grotesk);
+  --font-inter: var(--font-space-grotesk);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -22,8 +25,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    "Noto Sans", "Liberation Sans", sans-serif;
+  /* Ensure Space Grotesk is applied immediately; next/font still provides the variable, this is a safe fallback */
+  font-family: 'Space Grotesk', var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
 /* Navbar styles */
@@ -224,4 +228,12 @@ body {
   opacity: 1;
   z-index: 30;
   box-shadow: 0 30px 60px rgba(2,6,23,0.35);
+}
+
+/* Sentence-case helper: make text lowercase but capitalize the first letter */
+.sentence-case {
+  text-transform: lowercase;
+}
+.sentence-case::first-letter {
+  text-transform: uppercase;
 }

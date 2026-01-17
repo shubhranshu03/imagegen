@@ -46,10 +46,16 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-1">
           {/* Left: headline, description, waitlist textarea + button */}
           <div className="w-full md:w-1/2">
-            <h1 className={`${inter.className} text-4xl md:text-5xl font-semibold text-black leading-tight mb-6 inter-heading`}>
+            <h1
+              className={`${inter.className} text-4xl md:text-5xl font-semibold text-black leading-tight mb-6 inter-heading`}
+              style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif", textTransform: "lowercase" }}
+            >
               Transform your photos into beautiful aesthetic images — instantly.
             </h1>
-            <p className={`${inter.className} text-lg text-gray-700 mb-8 inter-subtext`}>
+            <p
+              className={`${inter.className} text-lg text-gray-700 mb-8 inter-subtext`}
+              style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif", textTransform: "none" }}
+            >
               Upload any image and let AI redesign it with modern gradients, lighting, and clean visuals.
             </p>
 
@@ -60,15 +66,25 @@ const HeroSection: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
+                  style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif", textTransform: "none" }}
                   className="px-3 py-3 border border-gray-200 rounded-md w-full sm:w-80 text-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
                 />
                 <button
                   type="submit"
                   disabled={loading}
                   className="w-full sm:w-auto px-5 py-3 bg-black text-white rounded-md font-semibold hover:opacity-95 transition text-lg disabled:opacity-60"
+                  style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif", textTransform: "none" }}
                 >
-                  {loading ? "Joining..." : "Join Waitlist"}
+                  {loading ? "Joining..." : "Join Wait"}
                 </button>
+              </div>
+              <div className="mt-2">
+                <p
+                  className="text-sm text-gray-600"
+                  style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif", textTransform: "none" }}
+                >
+                  100+ people already on the waitlist.
+                </p>
               </div>
             </form>
             {error && <div className="mt-3 text-sm text-red-600">{error}</div>}

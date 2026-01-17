@@ -8,7 +8,7 @@ const MarketingBanner: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Side - Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-6" style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif" }}>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight">
               Create Perfect Marketing Images in Seconds

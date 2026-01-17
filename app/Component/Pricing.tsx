@@ -59,11 +59,11 @@ export default function Pricing() {
     <section id="pricing" className="py-6 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-12 sm:mb-16">
           <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-4 border border-white/20">
             <span className="text-white/80 text-sm font-medium">Simple & Transparent</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-4" style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif" }}>
             Pay only for what you use. Customize your plan from $3 to $30.
           </h2>
           

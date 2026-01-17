@@ -46,13 +46,14 @@ const Navbar: React.FC = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button — visible only on small screens, absolute to the right */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
-            className="md:hidden text-black"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            className="md:hidden absolute right-4 top-6 text-black p-2 rounded-md hover:bg-gray-100"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
