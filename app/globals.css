@@ -237,3 +237,21 @@ body {
 .sentence-case::first-letter {
   text-transform: uppercase;
 }
+
+/* Infinite scroll animation for templates */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.template-scroll {
+  animation: scroll-infinite 60s linear infinite;
+}
+
+.template-scroll:hover {
+  animation-play-state: paused;
+}

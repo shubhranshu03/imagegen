@@ -1,11 +1,10 @@
  "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar: React.FC = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <nav className="site-navbar">
@@ -39,53 +38,25 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="px-4 py-2 bg-black text-white text-base font-medium border-2 border-white rounded-md hover:bg-white hover:text-black transition-all duration-300">
-              Try Now
-            </button>
-          </div>
+          {/* Empty flex to push button to right */}
+          <div className="flex-1"></div>
 
-          {/* Mobile Menu Button — visible only on small screens, absolute to the right */}
-          <button
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-expanded={mobileOpen}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className="md:hidden absolute right-4 top-6 text-black p-2 rounded-md hover:bg-gray-100"
+          {/* CTA Button — visible on all screens, aligned to right */}
+          {/* COMMENTED OUT: Dashboard navigation
+          <Link
+            href="/dashboard"
+            className="inline-block px-4 py-2 bg-black text-white text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-300"
           >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            Try Now
+          </Link>
+          */}
+          <button
+            className="inline-block px-4 py-2 bg-black text-white text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-300"
+            onClick={() => console.log("Try Now clicked - Navigation commented out")}
+          >
+            Try Now
           </button>
         </div>
-
-        {/* Mobile dropdown */}
-        {mobileOpen && (
-          <div className="md:hidden absolute left-0 top-full w-full bg-white shadow-md z-40">
-            <div className="px-6 py-4 flex flex-col gap-3">
-              <Link href="/" className="text-black text-lg font-medium" onClick={() => setMobileOpen(false)}>
-                Home
-              </Link>
-              <Link href="/features" className="text-black text-lg font-medium" onClick={() => setMobileOpen(false)}>
-                Features
-              </Link>
-              <Link href="/gallery" className="text-black text-lg font-medium" onClick={() => setMobileOpen(false)}>
-                Gallery
-              </Link>
-              <Link href="#pricing" className="text-black text-lg font-medium" onClick={() => setMobileOpen(false)}>
-                Pricing
-              </Link>
-              <div className="pt-2">
-                <button
-                  onClick={() => setMobileOpen(false)}
-                  className="w-full px-4 py-2 bg-black text-white text-base font-medium rounded-md"
-                >
-                  Try Now
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
