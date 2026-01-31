@@ -19,10 +19,10 @@ const Navbar: React.FC = () => {
               Home
             </Link>
             <Link
-              href="/features"
+              href="#products"
               className="text-black text-lg font-medium hover:text-gray-600 transition-colors duration-300"
             >
-              Features
+              Products
             </Link>
             <Link
               href="/gallery"
@@ -41,21 +41,12 @@ const Navbar: React.FC = () => {
           {/* Empty flex to push button to right */}
           <div className="flex-1"></div>
 
-          {/* CTA Button — visible on all screens, aligned to right */}
-          {/* COMMENTED OUT: Dashboard navigation
-          <Link
-            href="/dashboard"
-            className="inline-block px-4 py-2 bg-black text-white text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-300"
+          {/* CTA Button — visible on all screens, aligned to right (no navigation) */}
+          <span
+            className="inline-block px-4 py-2 bg-black text-white text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-300 cursor-default"
           >
             Try Now
-          </Link>
-          */}
-          <button
-            className="inline-block px-4 py-2 bg-black text-white text-base font-medium rounded-md hover:bg-gray-800 transition-all duration-300"
-            onClick={() => console.log("Try Now clicked - Navigation commented out")}
-          >
-            Try Now
-          </button>
+          </span>
         </div>
       </div>
     </nav>

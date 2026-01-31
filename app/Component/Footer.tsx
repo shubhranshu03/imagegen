@@ -5,12 +5,27 @@ export default function Footer() {
     <footer className="bg-black text-white py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-start">
-          <div className="text-lg font-semibold">ImageGen Ai</div>
-          <div className="text-sm text-gray-400">© {new Date().getFullYear()} ImageGen Ai — All rights reserved</div>
+          <div className="text-lg font-semibold">ImageVerse</div>
+          <div className="text-sm text-gray-400">© {new Date().getFullYear()} ImageVerse — All rights reserved</div>
+          <div className="mt-1 text-sm text-gray-400 flex items-center gap-1.5">
+            Built by{" "}
+            <a
+              href="https://x.com/martin745943021"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:underline inline-flex items-center gap-1"
+              aria-label="Shubh on X"
+            >
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              @shubh
+            </a>
+          </div>
           <nav className="mt-2 flex space-x-4 text-sm">
             <a href="#" className="text-gray-400 hover:text-white">Submit feedback</a>
-            <a href="#" className="text-gray-400 hover:text-white">Legal</a>
-            <a href="#" className="text-gray-400 hover:text-white">Contact us</a>
+            <a href="/legal" className="text-gray-400 hover:text-white">Legal</a>
+            <a href="/contact" className="text-gray-400 hover:text-white">Contact us</a>
           </nav>
         </div>
 

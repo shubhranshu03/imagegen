@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const ComparisonSection: React.FC = () => {
+  const fontStyle = { fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif" };
   const badPoints = [
     "Plain, boring background",
     "No visual depth or shadows",
@@ -45,10 +46,10 @@ const ComparisonSection: React.FC = () => {
 
           <div className="order-1 lg:order-2 space-y-6">
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black mb-4" style={fontStyle}>
                 Why Your Images Fail
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600" style={fontStyle}>
                 Plain screenshots don't convert. Here's why:
               </p>
             </div>
@@ -61,7 +62,7 @@ const ComparisonSection: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
-                  <p className="text-base sm:text-lg text-gray-700 flex-1">{point}</p>
+                  <p className="text-base sm:text-lg text-gray-700 flex-1" style={fontStyle}>{point}</p>
                 </div>
               ))}
             </div>
@@ -71,10 +72,10 @@ const ComparisonSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4 whitespace-nowrap">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black mb-4 whitespace-nowrap" style={fontStyle}>
                 Why This Works Better
               </h2>
-              <p className="text-lg text-gray-600">Professional images that actually convert:</p>
+              <p className="text-lg text-gray-600" style={fontStyle}>Professional images that actually convert:</p>
             </div>
 
             <div className="space-y-4">
@@ -85,7 +86,7 @@ const ComparisonSection: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-base sm:text-lg text-gray-700 flex-1">{point}</p>
+                  <p className="text-base sm:text-lg text-gray-700 flex-1" style={fontStyle}>{point}</p>
                 </div>
               ))}
             </div>

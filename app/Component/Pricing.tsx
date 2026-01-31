@@ -57,20 +57,32 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="py-6 px-4 sm:px-6">
-      <div className="max-w-3xl mx-auto w-full">
-        {/* Header */}
-          <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-4 border border-white/20">
-            <span className="text-white/80 text-sm font-medium">Simple & Transparent</span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-4" style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif" }}>
-            Pay only for what you use. Customize your plan from $3 to $30.
-          </h2>
-          
-        </div>
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          {/* Left Text */}
+          <div
+            className="space-y-5"
+            style={{ fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif" }}
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-black/5 rounded-full border border-black/10">
+              <span className="text-black/70 text-sm font-medium">
+                Simple &amp; Transparent
+              </span>
+            </div>
 
-        {/* Main Pricing Card */}
-        <div className="bg-black rounded-xl p-4 sm:p-6 shadow-md mx-auto max-w-xl">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-black leading-tight">
+              Pay only for what you use. Customize your plan from $3 to $30.
+            </h2>
+
+            <p className="text-base sm:text-lg text-gray-600 max-w-xl">
+              Use the slider to pick your budget — we’ll automatically match you to the
+              best plan and show what’s included.
+            </p>
+          </div>
+
+          {/* Right Card */}
+          <div className="lg:justify-self-end w-full">
+            <div className="bg-black rounded-xl p-4 sm:p-6 shadow-md w-full max-w-xl">
           
           {/* Price Display */}
            <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-4">
@@ -212,6 +224,8 @@ export default function Pricing() {
             </div>
           </div>
 
+            </div>
+          </div>
         </div>
       </div>
     </section>
